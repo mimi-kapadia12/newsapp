@@ -18,7 +18,7 @@ export class NewsItem extends PureComponent {
       >
         <span
           className="position-absolute translate-middle badge bg-dark"
-          style={{ zindex: "1" , left : '85%' , top : '5%' }}
+          style={{ zindex: "1", left: "85%", top: "5%" }}
         >
           {source}
         </span>

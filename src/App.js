@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Navbar from './Components/Navbar'
+import News from './Components/News'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  render() {
+    return (
+      <div>
+        <Router>
+          <Navbar/>
+          <Routes >
+            <Route path="/" element = {<News PageSize = {6} Country = "in" Category = "general" key="general"/>}/>
+            <Route exact path="/entertainment" element = {<News PageSize = {6} Country = "in" Category = "entertainment" key="entertainment"/>}/>
+            <Route exact path="/general" element = {<News PageSize = {6} Country = "in" Category = "general" key="general"/>}/>
+            <Route exact path="/health" element = {<News PageSize = {6} Country = "in" Category = "health" key="health"/>}/>
+            <Route exact path="/science" element = {<News PageSize = {6} Country = "in" Category = "science" key="science"/>}/>
+            <Route exact path="/technology" element = {<News PageSize = {6} Country = "in" Category = "technology" key="technology"/>}/>
+            <Route exact path="/sports" element = {<News PageSize = {6} Country = "in" Category = "sports" key="sports"/>}/>
+            <Route exact path="/business" element = {<News PageSize = {6} Country = "in" Category = "business" key="business"/>}/>
+          </Routes>
+          </Router>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App

@@ -9,7 +9,7 @@ export class NewsItem extends PureComponent {
         className="card my-2"
         style={{
           maxWidth: "150%",
-          height: "450px",
+          height: "470px",
           WebkitBoxOrient: "vertical",
           WebkitLineClamp: 2,
           overflow: "hidden",
@@ -17,8 +17,8 @@ export class NewsItem extends PureComponent {
         }}
       >
         <span
-          className="position-absolute translate-middle badge bg-dark"
-          style={{ zindex: "1", left: "85%", top: "5%" }}
+          className="position-absolute badge bg-dark"
+          style={{right : "10px" , top : "2%"}}
         >
           {source}
         </span>
@@ -26,15 +26,15 @@ export class NewsItem extends PureComponent {
           src={!url ? defaultImg : url}
           className="card-img-top"
           alt="..."
-          style={{ height: "200px", width: "100%" }}
+          style={{ height: "180px", width: "100%" }}
         />
         <div className="card-body">
-          <div style={{ height: "190px" }}>
+          <div style={{ height: "220px" }}>
             <h5 className="card-title" style={{ width: "100%" }}>
               {title}
             </h5>
-            <p className="card-text" style={{ width: "100%" }}>
-              {!description ? "" : description.slice(0, 100)}
+            <p className="card-text" style={{ width: "100%"}}>
+              {!description ? "" : description.slice(0,100)}
             </p>
             <p className="card-text" style={{ width: "100%" }}>
               by {!author ? "Unknown" : author} on{" "}
@@ -45,7 +45,7 @@ export class NewsItem extends PureComponent {
             href={newsUrl}
             target="_blank"
             rel="noreferrer"
-            style={{ float: "right" }}
+            style={{ float: "right" , top : "1%" }}
             className="btn btn-sm btn-dark"
           >
             Read More...

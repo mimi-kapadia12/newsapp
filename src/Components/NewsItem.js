@@ -18,7 +18,7 @@ export class NewsItem extends PureComponent {
       >
         <span
           className="position-absolute badge bg-dark"
-          style={{right : "10px" , top : "2%"}}
+          style={{ right: "10px", top: "2%" }}
         >
           {source}
         </span>
@@ -33,8 +33,8 @@ export class NewsItem extends PureComponent {
             <h5 className="card-title" style={{ width: "100%" }}>
               {title}
             </h5>
-            <p className="card-text" style={{ width: "100%"}}>
-              {!description ? "" : description.slice(0,100)}
+            <p className="card-text" style={{ width: "100%" }}>
+              {!description ? "" : description.slice(0, 100)}
             </p>
             <p className="card-text" style={{ width: "100%" }}>
               by {!author ? "Unknown" : author} on{" "}
@@ -45,7 +45,7 @@ export class NewsItem extends PureComponent {
             href={newsUrl}
             target="_blank"
             rel="noreferrer"
-            style={{ float: "right" , top : "1%" }}
+            style={{ float: "right", top: "1%" }}
             className="btn btn-sm btn-dark"
           >
             Read More...
